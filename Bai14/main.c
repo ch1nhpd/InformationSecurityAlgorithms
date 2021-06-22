@@ -65,7 +65,7 @@ int main()
 	for(int i = 2; i<n; i++)
 	{
 		if(isCarmichael(i))
-			printf("%d  ",i);
+			printf("%d   ",i);
 	}
     return 0;
 }

@@ -80,7 +80,7 @@ char* miller_Rabin(int n, int t)
 int main()
 {
 	int n;
-	printf("Nhap n: ");
+	printf("Nhap n:  ");
 	scanf("%d",&n);
 	printf("Fermat      ==> %s",fermat(n,5));
 	printf("\nMiler Rabin ==> %s", miller_Rabin(n,5));

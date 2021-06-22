@@ -2,26 +2,6 @@
 #include <stdlib.h>
 
 
-//theo dk can va du
-/*int isCarmichael(int n)
-{
-	for(int i = 2 ; i*i<=n; i++)
-	{
-		if(n%(i*i)==0)
-			return 0;
-	}
-	for(int i = 2; i<=n/2; ++i)
-	{
-		if(n%i==0 )
-		{
-			int t =(n-1)%(i-1);
-			if(t!=0)
-				return 0;
-		}
-
-	}
-	return 1;
-}*/
 
 int gcd(int a, int b)
 {
