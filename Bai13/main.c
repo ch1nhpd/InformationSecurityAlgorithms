@@ -40,18 +40,21 @@ int mul(int a, int k, int n)
 int isCarmichael(int n)
 {
 	int hopSo = 0;
-	for(int i = 2; i<=n/2;++i)
+	int flag = 0;
+	for(int i = 2; i<=n-2;++i)
 	{
 		if(n%i==0)
 		{
 			hopSo = 1;
 		}
-		if(gcd(n,i)==1&&mul(i, n -1, n)!=1)
+		if(gcd(n,i)==1)
 		{
-			return 0;
+			flag = 1;
+			if(mul(i, n -1, n)!=1)
+				return 0;
 		}
 	}
-	if(hopSo)
+	if(hopSo&&flag)
 	{
 		return 1;
 	}
