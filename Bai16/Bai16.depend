@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1624967957 source:c:\users\admin\desktop\ky 4\thuat toan\practice\bai16\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
