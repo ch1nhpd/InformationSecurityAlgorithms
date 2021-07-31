@@ -2,15 +2,34 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_STRING 	255
+
 int brute_force(char T[], char P[], int* dem)
 {
 	int i,j;
 	int lenT, lenP;
-	lenT=strlen(T);
+	lenT= strlen(T);
 	lenP= strlen(P);
 	i = j = 0;
 	(*dem) = 0;
-	while(i<lenT)
+
+	for( i = 0; i<=lenT-lenP;++i)
+	{
+		for( j =0;j<lenP; ++j)
+		{
+			(*dem)++;
+			if(T[i+j]!=P[j])
+			{
+				break;
+			}
+		}
+		if(j==lenP)
+		{
+			return i;
+		}
+	}
+	return -1;
+
+/*	while(i<lenT)
 	{
 		(*dem)++;
 		if(T[i] == P[j])
@@ -25,8 +44,7 @@ int brute_force(char T[], char P[], int* dem)
 			i = i - j + 1;
 			j = 0;
 		}
-	}
-	return -1;
+	}*/
 }
 
 
@@ -50,7 +68,7 @@ int main()
 
 	/*TEST CASE
 	T: "a string searching example is standard"
-	P: “example"
+	P: "example"
 
 	T: "aaaaaaaaaaaaaaaaaaaaaaaaaah"
 	P: "aaah"
