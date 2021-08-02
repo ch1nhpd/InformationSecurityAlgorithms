@@ -6,7 +6,7 @@ int cmp(char P[], int start1, int start2, int len)
 {
 	for(int i = 0;i<len;++i)
 	{
-		if(P[start1] != P[start2])
+		if(P[start1+i] != P[start2+i])
 		{
 			return 0;
 		}
